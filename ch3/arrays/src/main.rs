@@ -1,6 +1,6 @@
-use std::io::stdin;
+use std::{io::stdin, error::Error};
 
-fn main() {
+fn main() -> Result<(), Box<dyn Error>> {
     let a = [1, 2, 3, 4, 5];
     println!("{:?}", a);
 
@@ -8,9 +8,10 @@ fn main() {
 
     println!("enter an index [0->9]: ");
     let mut buf = String::new();
-    stdin().read_line(&mut buf).expect("need to enter valid index");
-    let val: usize = buf.trim().parse().expect("failed to parse index");
+    stdin().read_line(&mut buf)?;
+    let val: usize = buf.trim().parse()?;
 
     println!("{:?}", b[val]);
 
+    Ok(())
 }
