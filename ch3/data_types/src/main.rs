@@ -8,5 +8,13 @@ fn main() {
     if let Some(n) = 220u8.checked_add(35) {
         println!("checked add: {}", n);    
     }
+
+    // floating point
+    let x = 1.0; // f64
+    let mut y = 2.0f32;
+    
+    y += x;
+
+    println!("{}", y);
 }
 
