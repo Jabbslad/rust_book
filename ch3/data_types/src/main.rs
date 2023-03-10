@@ -16,5 +16,12 @@ fn main() {
     y += x;
 
     println!("{}", y);
+
+    let t: (u8, i32, f32) = (8, 23, 1.0);
+    println!("{}, {}, {}", t.0, t.1, t.2);
+    // or
+    let (x, y, z) = t;
+    println!("{x}, {y}, {z:.2}");
+    
 }
 
