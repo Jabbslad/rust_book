@@ -42,4 +42,15 @@ fn main() {
     }
 
     println!("LIFTOFF!");
+
+    let a = [1, 2, 3, 4, 5];
+
+    for element in a {
+        println!("{element}");
+    }
+
+    for element in (1..=3).rev() {
+        println!("{element}");
+    }
+    println!("LIFTOFF!");
 }
