@@ -14,4 +14,8 @@ fn main() {
     } else {
         println!("number is 3!");
     }
+
+    let answer = if true { 4 } else { 6 };
+
+    println!("{}", answer);
 }
