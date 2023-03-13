@@ -23,8 +23,16 @@ fn main() {
 
     assert!(std::ptr::eq(&c, &*d));
 
-    let mut first = String::from("Jamie");
+    let first = String::from("Jamie");
     let full_name = add_suffix(first);
     //first.push_str(" snr.");
     println!("{full_name}");
+
+    // cloning
+    let mut first = String::from("Jamie");
+    let full_name = add_suffix(first.clone());
+    first.push_str(" snr.");
+    println!("{full_name}");
+    println!("{first}");
+
 }
