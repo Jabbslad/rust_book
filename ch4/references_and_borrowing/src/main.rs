@@ -9,6 +9,14 @@ fn main() {
     let (m3_again, m4_again) = greet2(m3, m4);
     
     let _s = format!("{m3_again} {m4_again}");
+
+    let m5 = String::from("hello");
+    let m6 = String::from("world");
+    
+    greet3(&m5, &m6);
+
+
+    let _s = format!("{m5} {m6}");
 }
 
 fn greet(g1: String, g2: String) {
@@ -19,4 +27,8 @@ fn greet(g1: String, g2: String) {
 fn greet2(g1: String, g2: String) -> (String, String) {
     println!("{g1} {g2}");
     (g1, g2)
+}
+
+fn greet3(g1: &String, g2: &String) {
+    println!("{g1} {g2}");
 }
