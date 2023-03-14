@@ -24,6 +24,13 @@ fn main() {
     *x += 1;
     println!("{}", x);
     println!("{}", a);
+
+    let r1 = &x;
+    let b = **r1;
+    println!("b = {b}");
+    
+    let c = &*x;
+    println!("c = {c}");
 }
 
 fn greet(g1: String, g2: String) {
