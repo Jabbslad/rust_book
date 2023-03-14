@@ -15,8 +15,15 @@ fn main() {
     
     greet3(&m5, &m6);
 
-
     let _s = format!("{m5} {m6}");
+
+    //dereferencing
+    let mut x = Box::new(2);
+    let a = *x;
+    println!("{}", a);
+    *x += 1;
+    println!("{}", x);
+    println!("{}", a);
 }
 
 fn greet(g1: String, g2: String) {
